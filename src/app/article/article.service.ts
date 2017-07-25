@@ -6,18 +6,23 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 
-import {Article} from "./article";
+import { ArticleItem } from "./article";
+//import { ARTICLE_ITEMS } from "./weather-data";
 
 @Injectable()
 
 export class ArticleService {
     
-    private _url: string = "https://mobileapi.wp.pl/v1/graphql";
+    private _url: string = 'https://mobileapi.wp.pl/v1/graphql';
 
     constructor(private _http: Http) {
 
     }
 
+
+    //getWeatherItems() {
+        //return ARTICLE_ITEMS;
+//}
 
     getArt(): Observable<any> {
         return this._http.get(this._url)

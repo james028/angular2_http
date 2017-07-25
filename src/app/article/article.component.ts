@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ArticleService } from './article.service';
+import { ArticleItem } from "./article";
 
 @Component({
   selector: 'app-article',
@@ -21,6 +22,8 @@ export class ArticleComponent implements OnInit {
                 resArtiError => this.errorMsg = resArtiError);
 
   } 
+
+  //@Input('item') aa: ArticleItem;
 
 Ge: number = 34;
 }

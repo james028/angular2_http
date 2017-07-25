@@ -1,3 +1,3 @@
-export class Article {
-   constructor(public id: string, public title: string!) {}
+export class ArticleItem {
+    constructor(public id: string, public title: string) {}
 }
